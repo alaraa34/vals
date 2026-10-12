@@ -1,9 +1,10 @@
 <?php 
 namespace vals\src\php\tarif;
 use shared\php\bricks\Brick_table as BkTable;
+use shared\php\toolbox\Toolbox_adressage as TbAdressage;
 ob_start(); 
 ?>
-<div id="features">*
+<div id="features">
     <div class="inner">
         <div class="features-text">
             <h1>Tarifs</h1>
@@ -50,4 +51,4 @@ ob_start();
 </div>
 <?php
 $content = ob_get_clean();
-require(ROOT_PATH .'vals\src\php\socle\tpLayout.php');
+require(TbAdressage::projetGetLayout(__NAMESPACE__));

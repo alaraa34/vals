@@ -2,7 +2,7 @@
 $page_title = "Locations - Camping Les Vals";
 $current_page = "locations";
 
-include 'src/includes/header.php';
+include ROOT_PATH . 'vals/src/includes/header.php';
 ?>
 
 <!-- Bandeau promotionnel si renseigné -->
@@ -53,7 +53,7 @@ include 'src/includes/header.php';
             <!-- Tarifs / Promos -->
             <div class="col-md-6 col-lg-4">
                 <div class="card section-card h-100">
-                    <img src="fichiers/accueil/tarifs.jpg" class="card-img-top" alt="Tarifs">
+                    <img src="fichiers/accueil/tarifs.JPG" class="card-img-top" alt="Tarifs">
                     <div class="card-body text-center">
                         <h3 class="card-title text-uppercase">Autres 1</h3>
                         <p class="card-text">Consultez nos tarifs et profitez de nos offres promotionnelles</p>
@@ -91,4 +91,4 @@ include 'src/includes/header.php';
 
 
 
-<?php include 'vals/src/includes/footer.php'; ?>
+<?php include ROOT_PATH . 'vals/src/includes/footer.php'; ?>

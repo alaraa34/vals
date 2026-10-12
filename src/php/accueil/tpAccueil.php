@@ -2,7 +2,7 @@
 $page_title = "Accueil - Camping Les Vals";
 $current_page = "accueil";
 
-include 'src/includes/header.php';
+include ROOT_PATH . 'vals/src/includes/header.php';
 ?>
 
 <!-- Hero Section / Carousel -->
@@ -28,7 +28,7 @@ include 'src/includes/header.php';
                     <div class="card-body text-center">
                         <h3 class="card-title text-uppercase">Locations</h3>
                         <p class="card-text">Mobil-homes climatisés et emplacements spacieux pour tentes et caravanes</p>
-                        <a href="src/php/location/tpLocationPage.php" class="btn btn-outline-primary">En savoir plus</a>
+                        <a href="index.php?fct=pageLocation&ctr=location" class="btn btn-outline-primary">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@ include 'src/includes/header.php';
             <!-- Tarifs / Promos -->
             <div class="col-md-6 col-lg-4">
                 <div class="card section-card h-100">
-                    <img src="fichiers/accueil/tarifs.jpg" class="card-img-top" alt="Tarifs">
+                    <img src="fichiers/accueil/tarifs.JPG" class="card-img-top" alt="Tarifs">
                     <div class="card-body text-center">
                         <h3 class="card-title text-uppercase">Tarifs</h3>
                         <p class="card-text">Consultez nos tarifs et profitez de nos offres promotionnelles</p>
@@ -149,13 +149,13 @@ include 'src/includes/header.php';
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="row g-3">
                     <div class="col-6">
-                        <img src="fichiers/accueil/WhatsApp Image 2026-03-06 at 14.31.21" class="img-fluid rounded shadow" alt="Nature 1">
+                        <img src="fichiers/accueil/WhatsApp Image 2026-03-06 at 14.31.21.jpeg" class="img-fluid rounded shadow" alt="Nature 1">
                     </div>
                     <div class="col-6">
-                        <img src="fichiers/accueil/WhatsApp Image 2026-03-06 at 14.31.46 (3)" class="img-fluid rounded shadow" alt="Nature 2">
+                        <img src="fichiers/accueil/WhatsApp Image 2026-03-06 at 14.31.46 (3).jpeg" class="img-fluid rounded shadow" alt="Nature 2">
                     </div>
                     <div class="col-12">
-                        <img src="fichiers/accueil/WhatsApp Image 2026-03-06 at 14.31.11" class="img-fluid rounded shadow" alt="Nature 3">
+                        <img src="fichiers/accueil/WhatsApp Image 2026-03-06 at 14.31.11.jpeg" class="img-fluid rounded shadow" alt="Nature 3">
                     </div>
                 </div>
             </div>
@@ -184,4 +184,4 @@ include 'src/includes/header.php';
     </div>
 </section>
 
-<?php include 'vals/src/includes/footer.php'; ?>
+<?php include ROOT_PATH . 'vals/src/includes/footer.php'; ?>

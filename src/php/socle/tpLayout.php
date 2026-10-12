@@ -59,7 +59,7 @@
                 </span>
             </div>
         </nav>
-        <!<!-- CONTENU DE LA PAGE -->
+        <!-- CONTENU DE LA PAGE -->
         <main class="container">
             <!-- DEBUT DE PAGE -->
             <?= $content ?>
@@ -70,8 +70,7 @@
         <footer class="bg-body-tertiary text-center text-lg-start">
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2020 Copyright:
-                <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                © <?= date('Y') ?> Camping Les Vals
             </div>
             <!-- Copyright -->
         </footer>
@@ -81,15 +80,16 @@
         <?php if (isset($script)) {echo $script;} ?>
     <?php
         //Fonction affichage
-        use shared\php\classes\personalisation\Nomenclature as Nomenclature;
-        use shared\php\classes\socle\User as User;
         use shared\php\classes\socle\Menu as Menu;
-        use shared\php\toolbox\Toolbox as Tbx;
         
        
         function tpLayoutAfficherMenu():string{
             $menu = new Menu();
             return $menu->myhtml;
+        }
+        function tpLayoutHrefBoutonConnect(): string{
+        //bouton de la barre de menu : réservation en ligne (Secure Holiday)
+            return "https://reservation.secureholiday.net/fr/16206/search/product-list";
         }
   
 
