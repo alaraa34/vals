@@ -1,0 +1,439 @@
+/* ===== Variables ===== */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #198754;
+    --accent-color: #ffc107;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+    font-size: 0.9rem;
+}
+
+.top-bar a:hover {
+    text-decoration: underline !important;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* ===== Hero Carousel ===== */
+#hero-carousel {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+}
+
+#hero-carousel .carousel-item {
+    height: 70vh;
+    min-height: 500px;
+}
+
+#hero-carousel .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+#hero-carousel .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#hero-carousel .carousel-caption h1,
+#hero-carousel .carousel-caption h2 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+#hero-carousel .carousel-caption p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+}
+
+#hero-carousel .btn {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#hero-carousel .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Promo Banner ===== */
+.promo-banner {
+    font-size: 1.05rem;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== Values Section ===== */
+.values-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.value-card {
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===== Section Cards ===== */
+.section-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.section-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.section-card:hover img {
+    transform: scale(1.1);
+}
+
+.section-card .card-body {
+    padding: 2rem;
+}
+
+.section-card .card-title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.section-card .btn {
+    border-width: 2px;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.section-card .btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ===== Presentation Section ===== */
+.presentation h2 {
+    color: var(--primary-color);
+}
+
+.presentation img {
+    transition: transform 0.3s ease;
+}
+
+.presentation img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Nature Section ===== */
+.nature-section {
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* ===== Contact Form ===== */
+.contact-form-section {
+    background: url('../images/form-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contact-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.contact-form-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+#contactForm {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+#contactForm .form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+#contactForm .form-control,
+#contactForm .form-select {
+    border: 2px solid #e0e0e0;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+#contactForm .form-control:focus,
+#contactForm .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.footer h5,
+.footer h6 {
+    color: var(--accent-color);
+}
+
+.footer a:hover {
+    color: var(--accent-color) !important;
+    transition: all 0.3s ease;
+}
+
+.partner-logo {
+    max-height: 60px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.social-links .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--dark-color) !important;
+    transform: translateY(-3px);
+}
+
+/* ===== Back to Top Button ===== */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-floating {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(13, 110, 253, 0);
+    }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    #hero-carousel {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    #hero-carousel .carousel-item {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    #hero-carousel .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    #hero-carousel .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+    
+    #contactForm {
+        padding: 2rem 1rem;
+    }
+}
+
+/* ===== Animations ===== */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Utilities ===== */
+.shadow-custom {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
